@@ -2,19 +2,15 @@ import { Routes, Route } from 'react-router-dom';
 import TopDeal from '../TopDeal/TopDeal';
 import Categories from '../Categories/Categories';
 import TopSelling from '../TopSelling/TopSelling';
+import styles from './Main.module.css'; // don't forget to import styles
 
 const Main = (props) => {
   const { categories, topSelling } = props;
   return (
-    <div>
-      <h1>Main Component</h1>
+    <div className={styles.main}>
       <TopDeal />
-      {categories.map((item) => (
-        <Categories key={item.id} item={item} />
-      ))}
-      {topSelling.map((item) => (
-        <TopSelling key={item.id} item={item} />
-      ))}{' '}
+      <Categories categories={categories} />
+      <TopSelling topSelling={topSelling} />
     </div>
   );
 };

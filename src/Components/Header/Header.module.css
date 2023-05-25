@@ -1,0 +1,68 @@
+/* Header.module.css */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  background-color: #000;
+  color: #fff;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.logo {
+  width: 71px;
+}
+
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 50%;
+}
+
+.leftHead {
+  display: flex;
+  align-items: center;
+}
+
+.channel {
+  display: flex;
+}
+
+.channelButton {
+  display: flex;
+  align-items: center;
+  border: none;
+  background: none;
+  color: #fff;
+  cursor: pointer;
+}
+
+.channelImg {
+  width: 30px;
+  height: 30px;
+  margin-right: 5px;
+}
+
+.rightHead {
+  display: flex;
+  align-items: center;
+}
+
+.registerBtn {
+  display: flex;
+  align-items: center;
+  color: #fff;
+  background: linear-gradient(90deg, #e4002b 0%, #ff4749 100%);
+  border: none;
+  padding: 10px 20px;
+  border-radius: 25px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.registerBtn:hover {
+  background: linear-gradient(90deg, #ff4749 0%, #e4002b 100%);
+}
