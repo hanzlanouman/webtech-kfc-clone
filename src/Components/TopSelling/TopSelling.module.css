@@ -61,8 +61,7 @@
 .product p {
   text-align: left;
 }
-
-.product button {
+.cardContainer button {
   background-color: rgb(159, 0, 30); /* Material-UI primary color */
   color: #fff; /* White text color */
   border: none;
@@ -74,10 +73,23 @@
   transition: background-color 0.3s;
 }
 
+.product button {
+}
+
 .product button:hover {
   background-color: rgb(159, 10, 10); /* Darken the background color on hover */
 }
 .priceBtn {
   display: flex;
   flex-direction: row;
+}
+/* write a media query that makes top selling cards hace 0 margins and take up full width */
+.heading {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+  display: flex;
+  flex-direction: row;
+  /* ALign to the left side */
+  text-align: left;
 }

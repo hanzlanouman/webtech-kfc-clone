@@ -1,11 +1,11 @@
 import { useParams } from 'react-router-dom';
-import ProductImage from '../ProductImage/ProductImage';
-import ProductDescription from '../ProductDescription/ProductDescription';
+import ProductImageTask from '../ProductImage/ProductImageTask';
+import ProductDescriptionTask from '../ProductDescription/ProductDescriptionTask';
 import { useState } from 'react';
 import AddOnOrder from '../AddOnOrder/AddOnOrder';
-import styles from './Product.module.css';
+import styles from './ProductTask.module.css';
 import ChooseSoftDrink from '../AddOnOrder/ChooseSoftDrink';
-const Product = (props) => {
+const ProductTask = (props) => {
   const [addOns, setAddOns] = useState([
     {
       id: 1,
@@ -74,17 +74,17 @@ const Product = (props) => {
     return <div>No item found</div>;
   }
   return (
-    <div>
-      <div className={styles.order}>
-        <ProductImage item={item} />
-        <ProductDescription item={item} />
-      </div>
+    <div className={styles.productWrapper}>
       <div className={styles.addOns}>
-        <ChooseSoftDrink items={softDrink} />
         <AddOnOrder items={softDrink} />
+        <ChooseSoftDrink items={softDrink} />
+      </div>
+      <div className={styles.order}>
+        <ProductImageTask item={item} />
+        <ProductDescriptionTask item={item} />
       </div>
     </div>
   );
 };
 
-export default Product;
+export default ProductTask;

@@ -25,22 +25,18 @@
   border: none;
   border-radius: 0.5rem;
   padding: 0.5rem 1rem;
-  font-size: 1.5rem;
+  font-size: 1.2rem;
+  font-weight: 900;
   margin-bottom: 40px;
   margin-left: 0;
   cursor: pointer;
 }
+
 .descContainer span {
   margin-top: 20px;
   font-size: 2rem;
   margin: 0;
   padding: 0 20px;
-}
-
-.buttons {
-  display: flex;
-  flex-direction: row;
-  /* place the two buttons in front of each other */
 }
 
 .descContainer h1 {

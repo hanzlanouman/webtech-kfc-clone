@@ -1,16 +1,22 @@
-import { useState } from 'react';
 import styles from './AddOnOrder.module.css';
-const AddOnOrder = (props) => {
+const ChooseSoftDrink = (props) => {
   const { items } = props;
+
   return (
     <div className={styles.addoncontainer}>
-      <h1>Add a Soft Drink</h1>
+      <h1>Choose Your Soft Drink</h1>
       <div className={styles.addonbox}>
         {items.map((item) => (
           <div className={styles.item}>
             <p>{item.name}</p>
-            <p>{item.price}</p>
-            <button className={styles.addbtn}>+Add</button>
+
+            <input
+              className={styles.radio}
+              type='radio'
+              id={item.name}
+              name='softdrink'
+              value={item.name}
+            />
           </div>
         ))}
       </div>
@@ -18,4 +24,4 @@ const AddOnOrder = (props) => {
   );
 };
 
-export default AddOnOrder;
+export default ChooseSoftDrink;

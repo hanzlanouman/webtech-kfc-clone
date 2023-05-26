@@ -11,8 +11,12 @@
 
 .addonbox {
   background-color: #1c1816;
-  width: 300px;
+  width: 29rem;
+
+  /* 400px to rem  */
+
   border-radius: 20px;
+  height: 36rem;
 }
 .item {
   display: flex;
@@ -31,7 +35,54 @@
   border-radius: 0.6rem;
   padding: 0.2rem 0.2rem;
   font-size: 1rem;
+  /* Make it stick to the right */
+  margin-bottom: 10px;
+  margin-left: auto;
+  cursor: pointer;
+
   /* margin-bottom: 10px; */
   margin-left: 0;
   cursor: pointer;
+}
+.addoncontainer h1 {
+  font-size: 1.5rem;
+  margin-bottom: 1.2rem;
+}
+
+.item p {
+  font-size: 1.3rem;
+}
+.item input {
+  width: 20px;
+  height: 20px;
+  margin-right: 10px;
+  margin-left: auto;
+
+  cursor: pointer;
+  background-color: #e4002b;
+}
+/* write a media query that makes the box take 100% of space with no margins  */
+@media (max-width: 768px) {
+  .addoncontainer {
+    width: 100%;
+    margin: 0;
+    margin-top: 10px;
+    padding: 0;
+  }
+  .addonbox {
+    width: 100%;
+    border-radius: 0px;
+    margin: 0;
+    margin-bottom: 20px;
+  }
+  .item {
+    width: 100%;
+    margin: 0;
+  }
+  .addbtn {
+    width: 100%;
+    margin: 0;
+    /* align to the right */
+    align-self: flex-end;
+  }
 }

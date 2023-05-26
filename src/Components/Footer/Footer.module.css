@@ -51,19 +51,35 @@
   justify-content: space-between;
   width: 120px;
   margin-top: 20px;
+  /* Add some spaces */
+  margin-left: 30%;
+  margin-right: 30%;
+  flex-basis: 10%;
+}
+.social img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* add some spaces */
+  margin-left: 25%;
 }
 
 .social a {
   color: #fff;
-}
-
-.newsletter form {
+  text-decoration: none;
+  margin-bottom: 10px;
+  display: block;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
   display: flex;
-}
-
-.newsletter input {
-  flex-grow: 1;
-  margin-right: 10px;
+  justify-content: center;
+  align-items: center;
+  /* add some spaces */
+  margin-left: 25%;
 }
 
 .middle {
@@ -84,4 +100,40 @@
 }
 .logo {
   width: 71px;
+}
+.logoLinks {
+  display: flex;
+  justify-content: space-between;
+  width: 220px;
+  margin: 20px 0;
+  /* center it */
+  margin-left: 30%;
+  /* have them spaced apart */
+  margin-right: 30%;
+}
+
+/* Write media query to make this responsive */
+@media screen and (max-width: 768px) {
+  .top {
+    flex-direction: column;
+  }
+  .logo {
+    /* center it */
+    margin-left: 0;
+  }
+  .links {
+    flex-direction: column;
+  }
+  .social {
+    /* center it */
+    margin-left: 0;
+    /* have them spaced apart */
+    margin-right: 0;
+  }
+  .logoLinks {
+    /* center it */
+    margin-left: 0;
+    /* have them spaced apart */
+    margin-right: 0;
+  }
 }

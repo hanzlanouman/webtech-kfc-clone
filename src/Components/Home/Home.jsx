@@ -4,7 +4,7 @@ import TopDeal from '../TopDeal/TopDeal';
 import TopSelling from '../TopSelling/TopSelling';
 import Footer from '../Footer/Footer';
 import Main from '../Main/Main';
-import Product from '../Product/Product';
+import ProductTask from '../Product/ProductTask';
 import styles from './Home.module.css';
 import React, { useState } from 'react';
 import { Route, Routes } from 'react-router-dom';
@@ -67,11 +67,17 @@ const Home = () => {
         <Routes>
           <Route
             path='/'
-            element={<Main categories={categories} topSelling={topSelling} />}
+            element={
+              <Main
+                categories={categories}
+                topSelling={topSelling}
+                setTopSelling={setTopSelling}
+              />
+            }
           />
           <Route
             path='/order/:id'
-            element={<Product topSelling={topSelling} />}
+            element={<ProductTask topSelling={topSelling} />}
           />
         </Routes>
       </div>

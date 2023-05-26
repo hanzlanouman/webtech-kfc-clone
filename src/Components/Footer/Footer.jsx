@@ -1,22 +1,25 @@
 import { Link } from 'react-router-dom';
 import logo from '../../resources/KFC-logo.svg';
 import footerStyles from './Footer.module.css';
+import fblogo from '../../resources/facebook-circular-logo.png';
 
 const Footer = () => {
   return (
     <footer className={footerStyles.footer}>
       <div className={footerStyles.top}>
-        <div>
-          <img src={logo} alt='KFC logo' className={footerStyles.logo} />
+        <div className={footerStyles.logoLinks}>
+          <Link to='/'>
+            <img src={logo} alt='KFC logo' className={footerStyles.logo} />
+          </Link>
           <div className={footerStyles.social}>
             <Link to='/'>
-              <i className='fab fa-facebook-f'></i>
+              <img src={fblogo} />
             </Link>
             <Link to='/'>
-              <i className='fab fa-twitter'></i>
+              <img src={fblogo} />
             </Link>
             <Link to='/'>
-              <i className='fab fa-instagram'></i>
+              <img src={fblogo} />
             </Link>
           </div>
         </div>

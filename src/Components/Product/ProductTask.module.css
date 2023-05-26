@@ -1,0 +1,34 @@
+.order {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin: 0 0;
+  margin-top: 3rem;
+}
+.productWrapper {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin: 0 0;
+  margin-top: 3rem;
+}
+.addOns {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  margin: 0 0;
+  margin-top: 0rem;
+}
+
+@media (max-width: 768px) {
+  .order {
+    flex-direction: column;
+    align-items: center;
+  }
+  .addOns {
+    flex-direction: column;
+    align-items: center;
+  }
+}

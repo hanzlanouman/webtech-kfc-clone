@@ -5,3 +5,10 @@
   width: 85%;
   margin: auto;
 }
+/* Write media query that removes margins */
+@media (max-width: 768px) {
+  .container {
+    width: 100%;
+    margin: 0;
+  }
+}

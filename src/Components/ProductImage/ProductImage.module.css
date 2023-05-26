@@ -9,11 +9,15 @@
 /* Media Query to make image cover 100% for small devices */
 @media (max-width: 768px) {
   .imgContainer {
-    width: 95%;
+    width: 100%;
     height: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
     margin-right: 0px;
+  }
+  .imgContainer img {
+    width: 100%;
+    height: 80%;
   }
 }
