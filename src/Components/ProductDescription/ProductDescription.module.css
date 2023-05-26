@@ -42,3 +42,27 @@
   flex-direction: row;
   /* place the two buttons in front of each other */
 }
+
+.descContainer h1 {
+  font-weight: 900;
+}
+
+.buttons {
+  margin-top: 50px;
+}
+
+/* Media Query so that the buttons and text stick to left for small device*/
+@media (max-width: 768px) {
+  .descContainer {
+    align-items: flex-start;
+  }
+  .buttons {
+    flex-direction: row;
+  }
+  .descContainer span {
+    margin-top: 20px;
+    font-size: 2rem;
+    margin: 0;
+    padding: 0 20px;
+  }
+}

@@ -9,6 +9,7 @@
   position: sticky;
   top: 0;
   z-index: 100;
+  padding: 1rem 10rem;
 }
 
 .logo {
@@ -65,4 +66,22 @@
 
 .registerBtn:hover {
   background: linear-gradient(90deg, #ff4749 0%, #e4002b 100%);
+}
+
+/* Media query to fit the logo and Registerbtn */
+@media screen and (max-width: 768px) {
+  .header {
+    padding: 1rem 1rem;
+  }
+  .logo {
+    width: 50px;
+  }
+  .registerBtn {
+    padding: 5px 10px;
+    font-size: 0.8rem;
+  }
+  /* remove the button in between */
+  .channelButton {
+    display: none;
+  }
 }

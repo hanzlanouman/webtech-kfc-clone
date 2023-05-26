@@ -13,3 +13,15 @@
   margin: 0 auto;
   margin-top: 5rem;
 }
+
+/* Write a media query for small devices that takes everything vertically */
+@media (max-width: 768px) {
+  .order {
+    flex-direction: column;
+    align-items: center;
+  }
+  .addOns {
+    flex-direction: column;
+    align-items: center;
+  }
+}
