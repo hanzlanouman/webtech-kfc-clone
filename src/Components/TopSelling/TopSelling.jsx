@@ -1,11 +1,13 @@
 import { Link, Route, Routes } from 'react-router-dom';
 import Product from '../Product/Product';
 import styles from './TopSelling.module.css';
+import nomore from '../../resources/krunch.jpg';
 
 const TopSelling = (props) => {
   const { topSelling, setTopSelling } = props;
   const handleDeletion = (id) => {
     const newTopSelling = topSelling.filter((item) => item.id !== id);
+
     setTopSelling(newTopSelling);
   };
 
@@ -14,10 +16,6 @@ const TopSelling = (props) => {
       <h1 className={styles.heading}>Top Selling</h1>
 
       {topSelling.map((item) => {
-        // Check if item is null
-        if (!item) {
-          return <div>No More</div>;
-        }
         return (
           <div className={styles.cardContainer}>
             <Link to={`/order/${item.id}`}>
