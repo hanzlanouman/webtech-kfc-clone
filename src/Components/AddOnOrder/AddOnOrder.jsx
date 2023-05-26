@@ -1,17 +1,19 @@
 import { useState } from 'react';
-
+import styles from './AddOnOrder.module.css';
 const AddOnOrder = (props) => {
   const { items } = props;
   return (
-    <div>
+    <div className={styles.addoncontainer}>
       <h1>Add Ons</h1>
-      {items.map((item) => (
-        <div>
-          <p>{item.name}</p>
-          <p>{item.price}</p>
-          <button>+Add</button>
-        </div>
-      ))}
+      <div className={styles.addonbox}>
+        {items.map((item) => (
+          <div className={styles.item}>
+            <p>{item.name}</p>
+            <p>{item.price}</p>
+            <button className={styles.addbtn}>+Add</button>
+          </div>
+        ))}
+      </div>
     </div>
   );
 };

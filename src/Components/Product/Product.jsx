@@ -78,10 +78,8 @@ const Product = (props) => {
         <ProductImage item={item} />
         <ProductDescription item={item} />
       </div>
-      <div>
-        <h1>Add Ons</h1>
+      <div className={styles.addOns}>
         <AddOnOrder items={addOns} />
-        <h1>Soft Drinks</h1>
         <AddOnOrder items={softDrink} />
       </div>
     </div>
