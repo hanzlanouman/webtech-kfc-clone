@@ -7,17 +7,22 @@ const TopSelling = (props) => {
   return (
     <div className={styles.topSelling}>
       <h1>Top Selling</h1>
-      {topSelling.map((item) => (
-        <div key={item.id} className={styles.product}>
-          <img src={item.img} alt='product' />
-          <h1>{item.name}</h1>
-          <p>{item.description}</p>
-          <h2>{item.price}</h2>
 
-          <Link to={`/product/${item.id}`}>
-            <button>Add to bucket</button>
-          </Link>
-        </div>
+      {topSelling.map((item) => (
+        <Link to={`/order/${item.id}`}>
+          <div key={item.id} className={styles.product}>
+            <img src={item.img} alt='product' />
+            <h1>{item.name}</h1>
+            <p>{item.description}</p>
+            <div className={styles.priceBtn}>
+              <h1>Rs {item.price}</h1>
+
+              <Link to={`/order/${item.id}`}>
+                <button>Add to bucket</button>
+              </Link>
+            </div>
+          </div>
+        </Link>
       ))}
     </div>
   );

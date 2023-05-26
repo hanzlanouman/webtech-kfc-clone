@@ -34,7 +34,7 @@ const Home = () => {
     },
     {
       id: 2,
-      name: 'Crunch with Fries and Dring',
+      name: 'Crunch with Fries',
       price: 490,
       img: burger2,
       description: '1 Krunch, 1 Fries & 1 Drink',
@@ -62,14 +62,17 @@ const Home = () => {
 
   return (
     <div>
+      <Header />
       <div className={styles.container}>
-        <Header />
         <Routes>
           <Route
             path='/'
             element={<Main categories={categories} topSelling={topSelling} />}
           />
-          <Route path='/order/:id' element={<Product />} />
+          <Route
+            path='/order/:id'
+            element={<Product topSelling={topSelling} />}
+          />
         </Routes>
       </div>
       <Footer />

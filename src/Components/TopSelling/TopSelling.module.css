@@ -1,0 +1,83 @@
+.topSelling a {
+  text-decoration: none;
+  color: #fff;
+  &:hover {
+    text-decoration: none;
+    color: #fff;
+  }
+}
+
+.topSelling {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  /* make a blurry dark gradient background-color */
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8));
+  color: #fff; /* White text color */
+  padding: 20px;
+}
+
+.topSelling h1 {
+  margin-top: 10px;
+  font-size: 1.5rem;
+  font-weight: 700;
+  width: 100%;
+  margin-bottom: 10px;
+}
+.topSelling p {
+  /* Make it so that all boxes look the same size and the overflow text is hidden */
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  margin-bottom: 20px;
+}
+
+.product {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  background-color: #1d1816; /* Darker background for the card */
+  border-radius: 10px; /* Rounded corners like Material-UI */
+  padding: 25px 20px;
+  box-shadow: 0px 2px 1px -1px rgba(0, 0, 0, 0.2),
+    0px 1px 1px 0px rgba(0, 0, 0, 0.14), 0px 1px 3px 0px rgba(0, 0, 0, 0.12); /* Material-UI box shadow */
+  width: 310px; /* Adjust as needed */
+  margin: 10px;
+}
+
+.product img {
+  width: 100%;
+  height: auto;
+  &:hover {
+    /* The image grows inside the card with no overflow */
+    transform: scale(1.05);
+    transition: transform 0.5s ease-in-out;
+  }
+}
+
+.product h1,
+.product p {
+  text-align: left;
+}
+
+.product button {
+  background-color: rgb(159, 0, 30); /* Material-UI primary color */
+  color: #fff; /* White text color */
+  border: none;
+  padding: 5px 15px;
+  /* margin-top: 20px; */
+  border-radius: 8px; /* Rounded corners like Material-UI */
+  cursor: pointer;
+  text-decoration: none;
+  transition: background-color 0.3s;
+}
+
+.product button:hover {
+  background-color: rgb(159, 10, 10); /* Darken the background color on hover */
+}
+.priceBtn {
+  display: flex;
+  flex-direction: row;
+}
